@@ -1,0 +1,32 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Mobive2CreativeProj"
+             x:Class="Mobive2CreativeProj.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+
+
+	<Application.Resources>
+		<FontFamily x:Key="InknutAntiquaFont">avares://Mobive2CreativeProj/Assets/Fonts/InknutAntiqua-Bold.ttf</FontFamily>
+	</Application.Resources>
+
+	<Application.Resources>
+
+		<SolidColorBrush x:Key="MainBackgroundColor">#16191C</SolidColorBrush>
+
+		<SolidColorBrush x:Key="SecondaryBackgroundColor">#FFFFFF</SolidColorBrush>
+
+		<SolidColorBrush x:Key="AcsentColor">#FFBE40</SolidColorBrush>
+
+	</Application.Resources>
+	
+	
+</Application>

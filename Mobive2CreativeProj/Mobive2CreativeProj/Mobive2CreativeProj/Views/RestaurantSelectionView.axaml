@@ -1,0 +1,145 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Mobive2CreativeProj.ViewModels"
+			 mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
+             x:CompileBindings="True"
+             x:Class="Mobive2CreativeProj.Views.RestaurantSelectionView"
+             x:DataType="vm:RestaurantSelectionViewModel">
+
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:RestaurantSelectionViewModel/>
+	</Design.DataContext>
+
+	<UserControl.Styles>
+
+		<Style Selector="Button">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+		</Style>
+
+		<StyleInclude Source="/Styles/TextBoxStyle.axaml"/>
+
+	</UserControl.Styles>
+
+	<Border Background="{DynamicResource ResourceKey=MainBackgroundColor}">
+		<Grid RowDefinitions="Auto, *, Auto">
+			<!--Title bar-->
+			<Border Grid.Row="0" CornerRadius="5" BorderThickness="2" Background="{DynamicResource SecondaryBackgroundColor}">
+				<Grid ColumnDefinitions="*, Auto, *">
+					<!-- Title -->
+					<Grid Grid.Column="1" ColumnDefinitions="Auto, Auto">
+						<Image Grid.Column="0" Source="avares://Mobive2CreativeProj/Assets/free-icon-meal-1411329.png" Height="22"/>
+						<!--<Image Grid.Column="1" Source=""/> -->
+						<Label Grid.Column="1" Content="BookFood" FontSize="18" FontFamily="{StaticResource InknutAntiquaFont}"
+							   VerticalAlignment="Center" Margin="0, 2, 0, 0"/>
+
+					</Grid>
+
+					<!-- Notifications-->
+					<Button Grid.Column="2" Content="Notifi" Margin="0, 2, 0, 2">
+						<Image Source="{SvgImage /Assets/notification.svg}" Height="24"/>
+					</Button>
+				</Grid>
+			</Border>
+
+			<!-- Main content-->
+			<Grid Grid.Row="1" RowDefinitions="Auto, *">
+
+				<!-- Search box-->
+				<TextBox Grid.Row="0" Watermark="Search..."
+					Margin="6, 12, 6, 0" CornerRadius="8" MaxHeight="18"/>
+				<Image Grid.Row="0" Source="{SvgImage /Assets/search.svg}" Width="24"
+					   HorizontalAlignment="Right" Margin="16, 12, 16, 0"/>
+
+				<!-- Restaurants elements-->
+				<Grid Grid.Row="1" RowDefinitions="Auto, *" ZIndex="1">
+
+					<!-- first reasaurant-->
+					<Border Grid.Row="0" Background="White" CornerRadius="24" Margin="6, 15, 6, 15">
+						<Button Command="{Binding BoardingRestaranPage}">
+							<Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" Height="">
+								<!-- Restaurant name -->
+								<TextBlock Grid.Row="0" Text="Restaurant name" Margin="12, 10, 12, 0"/>
+								<!-- restaurant mark-->
+								<Grid Grid.Row="2" Margin="12, 8, 12, 0" ColumnDefinitions="Auto, Auto, Auto">
+									<TextBlock Text="4,9" VerticalAlignment="Center"/>
+									<Grid Grid.Column="1" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto">
+										<Image Grid.Column="0" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="1" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="2" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="3" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="4" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+									</Grid>
+									<TextBlock Grid.Column="2" Text="(71)"/>
+								</Grid>
+								<!-- Restaurant adress -->
+								<TextBlock Grid.Row="3" Text="Itilian causine * Street" Margin="12, 10, 12, 0"/>
+								<!-- Restaurant photo -->
+								<Border Grid.Row="4"  Margin="12, 6, 12, 18" ClipToBounds="True" CornerRadius="18">
+									<Image Source="/Assets/Biologiya-2048_biologie.ru_.jpg"/>
+								</Border>
+							</Grid>
+						</Button>
+					</Border>
+
+					<!-- second reasaurant-->
+					<Border Grid.Row="1" Background="White" CornerRadius="24" Margin="6, 0, 6, 15">
+						<Button>
+							<Grid RowDefinitions="Auto, Auto, Auto, Auto, *">
+								<!-- Restaurant name -->
+								<TextBlock Grid.Row="0" Text="Restaurant name" Margin="12, 10, 12, 0"/>
+								<!-- restaurant mark-->
+								<Grid Grid.Row="2" Margin="12, 8, 12, 0" ColumnDefinitions="Auto, Auto, Auto">
+									<TextBlock Text="4,9" VerticalAlignment="Center"/>
+									<Grid Grid.Column="1" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto">
+										<Image Grid.Column="0" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="1" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="2" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="3" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+										<Image Grid.Column="4" Source="{SvgImage /Assets/star.svg}" Height="18"/>
+									</Grid>
+									<TextBlock Grid.Column="2" Text="(71)"/>
+								</Grid>
+								<!-- Restaurant adress -->
+								<TextBlock Grid.Row="3" Text="Itilian causine * Street" Margin="12, 10, 12, 0"/>
+								<!-- Restaurant photo -->
+								<Border Grid.Row="4"  Margin="12, 6, 12, 18" ClipToBounds="True" CornerRadius="18"
+										Height="200" Width="300">
+									<Image Source="avares://Mobive2CreativeProj/Assets/e74586a0f49fcd210c6b15d0629b4110.jpg"
+										   Height="{Binding $parent.Height}" Width="{Binding $parent.Width}"/>
+								</Border>
+							</Grid>
+						</Button>
+					</Border>
+				</Grid>
+			</Grid>
+
+			<!-- Bottom bar-->
+			<Border Grid.Row="2" CornerRadius="5" BorderThickness="2" Background="{DynamicResource SecondaryBackgroundColor}">
+				<Grid ColumnDefinitions="*, *, *, *, *, *, *">
+					<!-- Home button-->
+					<Button Grid.Column="1" Content="Home" Margin="0, 4, 0, 4">
+						<Image Source="{SvgImage /Assets/main_page.svg}" Height="24"/>
+					</Button>
+
+					<!-- Cary button-->
+					<Button Grid.Column="3" Content="Cart">
+						<Image Source="{SvgImage /Assets/basket.svg}" Height="24"/>
+					</Button>
+
+					<!-- Profile button-->
+					<Button Grid.Column="5" Content="Prof">
+						<Image Source="/Assets/icons8-user-96.png"/>
+					</Button>
+				</Grid>
+			</Border>
+
+
+		</Grid>
+	</Border>
+
+</UserControl>

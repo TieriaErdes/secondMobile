@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobive2CreativeProj", "Mobive2CreativeProj\Mobive2CreativeProj\Mobive2CreativeProj.csproj", "{257163AE-6B87-44B0-AD2A-8DF3977875E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobive2CreativeProj.Android", "Mobive2CreativeProj\Mobive2CreativeProj.Android\Mobive2CreativeProj.Android.csproj", "{AD5FC486-74A1-4CEA-8305-42A067117010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobive2CreativeProj.Desktop", "Mobive2CreativeProj\Mobive2CreativeProj.Desktop\Mobive2CreativeProj.Desktop.csproj", "{682FD4E5-2B46-4EBD-9FA6-5A2BE55F49E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobive2CreativeProj.iOS", "Mobive2CreativeProj\Mobive2CreativeProj.iOS\Mobive2CreativeProj.iOS.csproj", "{E748E254-49CC-477B-99A2-FB56540BDDE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobive2CreativeProj.Browser", "Mobive2CreativeProj\Mobive2CreativeProj.Browser\Mobive2CreativeProj.Browser.csproj", "{255AACE3-19DD-408C-B10D-435168023D92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{257163AE-6B87-44B0-AD2A-8DF3977875E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257163AE-6B87-44B0-AD2A-8DF3977875E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257163AE-6B87-44B0-AD2A-8DF3977875E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257163AE-6B87-44B0-AD2A-8DF3977875E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5FC486-74A1-4CEA-8305-42A067117010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5FC486-74A1-4CEA-8305-42A067117010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5FC486-74A1-4CEA-8305-42A067117010}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AD5FC486-74A1-4CEA-8305-42A067117010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5FC486-74A1-4CEA-8305-42A067117010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD5FC486-74A1-4CEA-8305-42A067117010}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{682FD4E5-2B46-4EBD-9FA6-5A2BE55F49E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682FD4E5-2B46-4EBD-9FA6-5A2BE55F49E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682FD4E5-2B46-4EBD-9FA6-5A2BE55F49E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682FD4E5-2B46-4EBD-9FA6-5A2BE55F49E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E748E254-49CC-477B-99A2-FB56540BDDE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E748E254-49CC-477B-99A2-FB56540BDDE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E748E254-49CC-477B-99A2-FB56540BDDE0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E748E254-49CC-477B-99A2-FB56540BDDE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E748E254-49CC-477B-99A2-FB56540BDDE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E748E254-49CC-477B-99A2-FB56540BDDE0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{255AACE3-19DD-408C-B10D-435168023D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255AACE3-19DD-408C-B10D-435168023D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255AACE3-19DD-408C-B10D-435168023D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255AACE3-19DD-408C-B10D-435168023D92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7190798C-7092-4E45-B149-717B57CC2AD7}
+	EndGlobalSection
+EndGlobal

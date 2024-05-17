@@ -1,0 +1,81 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:Mobive2CreativeProj.ViewModels"
+			 mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
+             x:CompileBindings="True"
+             x:Class="Mobive2CreativeProj.Views.MainView"
+             x:DataType="vm:MainViewModel">
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:MainViewModel/>
+	</Design.DataContext>
+
+	<UserControl.Styles>
+		
+		<Style Selector="Button">
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+		</Style>
+
+		<StyleInclude Source="/Styles/TextBoxStyle.axaml"/>
+		
+	</UserControl.Styles>
+
+	<TransitioningContentControl Content="{Binding CurrentPage}">
+		<Border Background="{DynamicResource ResourceKey=MainBackgroundColor}">
+			<Grid RowDefinitions="Auto, *, Auto">
+
+				<!-- Noise image -->
+				<Image />
+
+				<!--Title bar-->
+				<Border Grid.Row="0" CornerRadius="5" BorderThickness="2" Background="{DynamicResource SecondaryBackgroundColor}">
+					<Grid ColumnDefinitions="*, Auto, *">
+						<!-- Title -->
+						<Grid Grid.Column="1" ColumnDefinitions="Auto, Auto">
+							<Image Grid.Column="0" Source="avares://Mobive2CreativeProj/Assets/free-icon-meal-1411329.png" Height="22"/>
+							<!--<Image Grid.Column="1" Source=""/> -->
+							<Label Grid.Column="1" Content="BookFood"
+								   FontSize="18" FontFamily="{StaticResource InknutAntiquaFont}"
+								   VerticalAlignment="Center" Margin="0, 2, 0, 0"/>
+
+						</Grid>
+
+						<!-- Notifications-->
+						<Button Grid.Column="2" Content="Notifi" Margin="0, 2, 0, 2">
+							<Image Source="{SvgImage /Assets/notification.svg}" Height="24"/>
+						</Button>
+					</Grid>
+				</Border>
+
+				<!-- Main content-->
+				<TransitioningContentControl Content="{Binding CurrentPage}" />
+
+				<!-- Bottom bar-->
+				<Border Grid.Row="2" CornerRadius="5" BorderThickness="2" Background="{DynamicResource SecondaryBackgroundColor}">
+					<Grid ColumnDefinitions="*, *, *, *, *, *, *">
+						<!-- Home button-->
+						<Button Grid.Column="1" Content="Home" Margin="0, 4, 0, 4">
+							<Image Source="{SvgImage /Assets/main_page.svg}" Height="24"/>
+						</Button>
+
+						<!-- Cary button-->
+						<Button Grid.Column="3" Content="Cart">
+							<Image Source="{SvgImage /Assets/basket.svg}" Height="24"/>
+						</Button>
+
+						<!-- Profile button-->
+						<Button Grid.Column="5" Content="Prof" Command="{Binding RestaurantSelectionPage}">
+							<Image Source="/Assets/icons8-user-96.png"/>
+						</Button>
+					</Grid>
+				</Border>
+
+			</Grid>
+		</Border>
+	</TransitioningContentControl>
+
+</UserControl>
